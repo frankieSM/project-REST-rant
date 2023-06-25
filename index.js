@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{
 
 //404 ROUTE
 app.get('*',(req, res)=> {
-    res.status(404).send('<h1>404 Page</h1>')
+    res.render('error404') //changed from res.status(404).send('<h1>404 Page</h1>') to use the new render view
 })
 
 app.listen(process.env.PORT)
