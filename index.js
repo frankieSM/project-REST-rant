@@ -14,7 +14,7 @@ app.use('/places', require('./controllers/places'))
 
 //HOME ROUTE
 app.get('/', (req, res)=>{
-    res.render('home') //pass in name of view created ex. "home", render knows to search for views folder
+    res.render('home')
 })
 
 //404 ROUTE
