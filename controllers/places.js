@@ -21,4 +21,9 @@ router.get("/", (req, res) => {
   res.render("places/index", {places}); //why is this in curly braces ??
 });
 
+router.get('/new', (req, res) => {
+  res.render('places/new')
+})
+
+
 module.exports = router;
