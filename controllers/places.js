@@ -25,5 +25,11 @@ router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
+router.post('/', (req, res)=>{ //why is it not /places ? not sure how this works still.
+  res.send('POST /places')
+})
+
 
 module.exports = router;
+
+
