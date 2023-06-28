@@ -26,6 +26,7 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/', (req, res)=>{ //why is it not /places ? not sure how this works still.
+  console.log(req.body)
   res.send('POST /places')
 })
 

@@ -13,8 +13,12 @@ app.engine('jsx', require('express-react-views').createEngine())
 //LET EXPRESS KNOW WHAT STATIC FOLDER IS CALLED
 app.use(express.static('public'));
 
+//BODY PARSER
+app.use(express.urlencoded({ extended: true }))
+
 //IMPORT PLACES.JS (The first argument to app.use, /places sets all routes in the places controller relative to /places. This means that /places will be added in front of any other path we define in the controller.)
 app.use('/places', require('./controllers/places'))
+
 
 //HOME ROUTE
 app.get('/', (req, res)=>{
