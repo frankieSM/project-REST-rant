@@ -41,6 +41,7 @@ router.get('/:id', (req, res) => {
 })
 
 
+
 //why is it not /places ? not sure how this works still.
 router.post('/', (req, res) => {
   console.log(req.body)

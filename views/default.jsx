@@ -15,13 +15,13 @@ function Def(html) {
         <nav>
           <ul>
             <li>
-              <a href="/"></a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="/"></a>
+              <a href="/places">Places</a>
             </li>
             <li>
-              <a href="/"></a>
+              <a href="/places/new">Add Place</a>
             </li>
           </ul>
         </nav>
