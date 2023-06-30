@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/places', require('./controllers/places'))
 
 //METHOD OVERRIDE
-app.use(methodOverride('method'))
+app.use(methodOverride('_method'))
 
 
 //HOME ROUTE

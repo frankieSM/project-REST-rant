@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const places =require('../models/places.js');
+const places = require('../models/places.js'); 
 
 router.get("/", (req, res) => {
   let places = [
@@ -40,6 +40,35 @@ router.get('/:id', (req, res) => {
   }
 })
 
+//EDIT ROUTE
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
+  }
+})
+
+
+//DELETE ROUTE
+router.delete('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id, 1)
+    res.redirect('/places')
+  }
+})
 
 
 //why is it not /places ? not sure how this works still.
