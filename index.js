@@ -34,4 +34,6 @@ app.get('*',(req, res)=> {
     res.render('error404') //changed from res.status(404).send('<h1>404 Page</h1>') to use the new render view
 })
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT, function () {
+    console.log('Server is running!')
+  })
